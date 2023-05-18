@@ -17,7 +17,7 @@ export default function Info({
 }) {
   return (
     <section className="lg:w-full">
-      <h2 className="font-bold text-2xl leading-7 text-denim lg:text-[32px] lg:leading-[37px]">Personal info</h2>
+      <h1 className="font-bold text-2xl leading-7 text-denim lg:text-[32px] lg:leading-[37px]">Personal info</h1>
       <p className="font-normal text-base leading-[25px] text-grey mt-[9px] lg:mt-[11px]">
         Please provide your name, email, address, and phone number.
       </p>

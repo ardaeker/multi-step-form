@@ -111,7 +111,7 @@ export default function Home() {
       <main className="bg-background-color min-h-screen  flex flex-col items-center justify-between   lg:flex-row  lg:bg-white lg:min-h-[600px] lg:w-[940px] lg:rounded-[15px] lg:shadow-[0px_25px_40px_-20px_rgba(0,0,0,0.0951141);]  lg:p-4">
         <div className="steps_mobile w-full h-[172px] absolute top-0 left-0 lg:hidden" />
         <div className="z-10 flex flex-col items-center lg:flex-row">
-          <section className="z-10 mt-8 mb-[34px] steps_desktop lg:h-[632px] lg:flex-[0_0_274px] lg:mb-0 lg:mt-0 lg:rounded-[10px]">
+          <div className="z-10 mt-8 mb-[34px] steps_desktop lg:h-[632px] lg:flex-[0_0_274px] lg:mb-0 lg:mt-0 lg:rounded-[10px]">
             <ul className="flex gap-4 lg:flex-col lg:px-8 lg:py-10 lg:gap-8">
               {stepList.map((item) => (
                 <li key={item.id} className="lg:flex lg:gap-4">
@@ -131,7 +131,7 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-          </section>
+          </div>
 
           <div className="z-10 lg:flex-[0_0_634px]  lg:h-[632px] lg:flex lg:flex-col lg:pt-14 lg:pb-8 lg:px-[100px] lg:justify-between">
             <AnimatePresence initial={false} mode="wait">
@@ -243,7 +243,7 @@ export default function Home() {
         )}
       </main>
       <footer>
-        <p class="hidden lg:block text-sm sm:text-base whitespace-nowrap font-barlow font-semibold text-neutral-700">
+        <p class="hidden lg:block text-sm sm:text-base whitespace-nowrap bg-white px-2 py-1 rounded-lg font-barlow font-semibold text-neutral-700">
           Challenge by&nbsp;
           <a
             class="text-blue-500 hover:text-blue-400"
