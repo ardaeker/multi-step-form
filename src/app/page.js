@@ -246,14 +246,14 @@ export default function Home() {
         <p class="hidden lg:block text-sm sm:text-base whitespace-nowrap font-barlow font-semibold text-neutral-700">
           Challenge by&nbsp;
           <a
-            class="text-cyan-950 hover:text-cyan-400"
+            class="text-blue-500 hover:text-blue-400"
             href="https://www.frontendmentor.io?ref=challenge"
             target="_blank"
           >
             Frontend Mentor
           </a>
           . Coded by&nbsp;
-          <a class="text-cyan-950 hover:text-cyan-400" href="https://www.frontendmentor.io/profile/ardaeker">
+          <a class="text-blue-500 hover:text-blue-400" href="https://www.frontendmentor.io/profile/ardaeker">
             Arda Eker
           </a>
           .
