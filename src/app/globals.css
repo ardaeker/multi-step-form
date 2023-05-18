@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  input[type="checkbox"]:checked::after {
+    background-image: url("../../public/images/icon-checkmark.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.steps_mobile {
+  background-image: url("../../public/images/bg-sidebar-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 1024px) {
+  .steps_desktop {
+    background-image: url("../../public/images/bg-sidebar-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
