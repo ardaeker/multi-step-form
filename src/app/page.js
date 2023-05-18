@@ -243,17 +243,20 @@ export default function Home() {
         )}
       </main>
       <footer>
-        <p class="hidden lg:block text-sm sm:text-base whitespace-nowrap bg-white px-2 py-1 rounded-lg font-barlow font-semibold text-neutral-700">
+        <p className="hidden lg:block text-sm sm:text-base whitespace-nowrap bg-white px-2 py-1 rounded-lg font-barlow font-semibold text-neutral-700">
           Challenge by&nbsp;
           <a
-            class="text-blue-700 hover:text-blue-300 underline"
+            className="text-blue-700 hover:text-blue-300 underline"
             href="https://www.frontendmentor.io?ref=challenge"
             target="_blank"
           >
             Frontend Mentor
           </a>
           . Coded by&nbsp;
-          <a class="text-blue-700 hover:text-blue-300 underline" href="https://www.frontendmentor.io/profile/ardaeker">
+          <a
+            className="text-blue-700 hover:text-blue-300 underline"
+            href="https://www.frontendmentor.io/profile/ardaeker"
+          >
             Arda Eker
           </a>
           .
