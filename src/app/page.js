@@ -6,7 +6,8 @@ import Plan from "@/components/Plan";
 import Summary from "@/components/Summary";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import validator from "validator";
+import isEmail from "validator/lib/isEmail";
+import isMobilePhone from "validator/lib/isMobilePhone";
 
 const stepList = [
   { id: 1, name: "Your Info" },
@@ -20,6 +21,9 @@ export default function Home() {
   const [nextStep, setNextStep] = useState(true);
 
   /* --------------------------------
+  Global
+    - Current Step [step, setStep]
+    - Is Next Step [nextStep, setNextStep]
 
   Personal Info
     - Name Input [name, setName]
@@ -38,7 +42,7 @@ export default function Home() {
   Pick Add-ons
     - Add-ons Objects of Array [{name: "Online service", price: 1}, {name: "Larger storage", price: 2}]
    -------------------------------- */
-  // Personal Info
+
   const [name, setName] = useState("");
   const [errName, setErrName] = useState("");
 
@@ -76,23 +80,17 @@ export default function Home() {
 
       if (email.length <= 0) {
         setErrEmail("This field is required");
-      } else if (!validator.isEmail(email)) {
+      } else if (!isEmail(email)) {
         setErrEmail("Enter a valid email");
       }
 
       if (phone.length <= 0) {
         setErrPhone("This field is required");
-      } else if (!validator.isMobilePhone(phone, "en-US")) {
+      } else if (!isMobilePhone(phone, "en-US")) {
         setErrPhone("Enter a valid phone number");
       }
 
-      if (
-        name.length > 0 &&
-        email.length > 0 &&
-        validator.isEmail(email) &&
-        phone.length > 0 &&
-        validator.isMobilePhone(phone, "en-US")
-      ) {
+      if (name.length > 0 && email.length > 0 && isEmail(email) && phone.length > 0 && isMobilePhone(phone, "en-US")) {
         setNextStep(true);
         setTimeout(() => {
           setStep(val + 1);

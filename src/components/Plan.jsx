@@ -26,7 +26,7 @@ export default function Plan({ isYearly, setIsYearly, planDetail, setPlanDetail 
             animate={isMobileOrDesktop ? { height: isYearly ? 183 : 160 } : { height: isYearly ? 100 : 74 }}
             transition={{ duration: 0.1 }}
             onClick={() => setPlanDetail(item)}
-            className={`flex transition-all cursor-pointer  lg:flex-col lg:items-start lg:justify-between lg:pt-[20px] lg:pb-4  items-center gap-[14px] pl-[16px] pt-[14px] pb-[18px] w-full border  rounded-lg ${
+            className={`flex transition-all cursor-pointer  lg:flex-col lg:items-start lg:justify-between hover:border-purple lg:pt-[20px] lg:pb-4  items-center gap-[14px] pl-[16px] pt-[14px] pb-[18px] w-full border  rounded-lg ${
               planDetail.id === item.id ? "border-purple bg-very-light-grey" : "border-border-color"
             }`}
           >

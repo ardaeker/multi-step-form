@@ -8,8 +8,6 @@ const addOns = [
 ];
 
 export default function Addons({ addons, setAddons, isYearly }) {
-  const [selected, setSelected] = useState([1, 2]);
-
   const handlerAddons = (item) => {
     if (addons.some((addon) => addon.id === item.id)) {
       const newAddons = addons.filter((addon) => addon.id !== item.id);
@@ -30,13 +28,14 @@ export default function Addons({ addons, setAddons, isYearly }) {
         {addOns.map((item, index) => (
           <div
             key={item.id}
-            className={`flex items-center gap-4 lg:gap-6 px-4 pt-[13px] pb-[10px] border  rounded-lg ${
-              addons.some((addon) => addon.id === item.id) ? "border-purple" : "border-border-color"
+            onClick={() => handlerAddons(item, index)}
+            className={`flex items-center gap-4 hover:border-purple  cursor-pointer lg:gap-6 px-4 pt-[13px] pb-[10px] border  rounded-lg ${
+              addons.some((addon) => addon.id === item.id) ? "border-purple bg-very-light-grey" : "border-border-color"
             }`}
           >
             <input
               type="checkbox"
-              defaultChecked={addons.some((addon) => addon.id === item.id)}
+              checked={addons.some((addon) => addon.id === item.id) ? true : false || false}
               className="w-5 h-5 rounded-[4px]  appearance-none border after:transition-colors relative checked:bg-purple checked:border-none flex items-center justify-center   border-light-grey "
               onChange={() => handlerAddons(item, index)}
             />

@@ -35,8 +35,8 @@ export default function Summary({ planDetail, addons, isYearly, setStep }) {
           </span>
         </div>
         {addons &&
-          addons.map((item) => (
-            <div key={item.id} className="flex items-center justify-between mt-3 lg:mt-4">
+          addons.map((item, index) => (
+            <div key={index} className="flex items-center justify-between mt-3 lg:mt-4">
               <span className="font-normal text-sm leading-5 text-grey">{item.name}</span>
               <span className="font-normal text-sm leading-5 text-denim">
                 +${isYearly ? `${item.priceYear}/yr` : `${item.priceMonth}/mo`}
