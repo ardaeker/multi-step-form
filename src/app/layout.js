@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${ubuntu.variable} font-ubuntu min-h-screen lg:flex lg:items-center lg:justify-center lg:bg-background-color  relative`}
+        className={`${ubuntu.variable} font-ubuntu min-h-screen lg:flex lg:flex-col lg:items-center lg:justify-center lg:bg-background-color  relative  gap-4`}
       >
         {children}
       </body>
